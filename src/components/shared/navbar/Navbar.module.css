@@ -1,0 +1,9 @@
+.search{
+  outline: 0;
+  border: 0;
+}
+.search:focus{
+  outline: none !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+}
