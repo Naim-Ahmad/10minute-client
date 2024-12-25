@@ -5,6 +5,12 @@ import { useNavigate } from "react-router"
 import axiosInstance from "../../lib/axios/config"
 import "./Login.css"
 
+const slides = [
+  { id: 1, content: "Slide 1", image: "https://cdn.10minuteschool.com/images/routine1_1722246290896.svg" },
+  { id: 2, content: "Slide 2", image: "https://cdn.10minuteschool.com/images/routine3_1722246356028.svg" },
+  { id: 3, content: "Slide 3", image: "https://cdn.10minuteschool.com/images/routine2_1722246331227.svg" },
+];
+
 export default function Login() {
   const [isExist, setIsExist] = useState(null)
   const [isShowPassword, setIsShowPassword] = useState(false)
@@ -12,6 +18,7 @@ export default function Login() {
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
   const [isValidIdentity, setIsValidIdentity] = useState(null)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const navigate = useNavigate()
 
@@ -24,6 +31,17 @@ export default function Login() {
       setIsValidIdentity(false)
     }
   }, [email])
+
+  // Change slide every 2 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
   // toggle password visibility
   const handleShowPassword = () => setIsShowPassword(!isShowPassword)
@@ -183,8 +201,20 @@ export default function Login() {
         <div>
           <p className="text-xl font-bold text-center"> দৈনিক লাইভ ক্লাসে অংশ নিয়ে বজায় রাখুন রুটিনমাফিক পড়াশোনা</p>
           <div className="flex flex-col items-center justify-center mt-12">
-            <img src="https://cdn.10minuteschool.com/images/routine1_1722246290896.svg" alt="slider" />
-            <div><span className="w-2 inline-block h-2 rounded-full bg-gray-300 mx-1 cursor-pointer "></span><span className="w-2 inline-block h-2 rounded-full bg-gray-300 mx-1 cursor-pointer bg-green w-4"></span><span className="w-2 inline-block h-2 rounded-full bg-gray-300 mx-1 cursor-pointer "></span><span className="w-2 inline-block h-2 rounded-full bg-gray-300 mx-1 cursor-pointer "></span></div>
+            <img
+              src={slides[currentIndex].image}
+              alt={`Slide ${currentIndex + 1}`}
+            />
+            {/* Dots for Navigation */}
+            <div className="flex justify-center gap-2 mt-4">
+              {slides.map((slide, index) => (
+                <div
+                  key={slide.id}
+                  className={`w-2 h-2 rounded-full ${currentIndex === index ? "bg-green-500 w-4" : "bg-gray-300"
+                    }`}
+                ></div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
