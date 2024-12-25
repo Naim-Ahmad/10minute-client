@@ -13,14 +13,12 @@ export default function NavbarMain() {
     setIsOpen(!isOpen)
   }
 
-  const openDropdown = e => {
-    e.target.click()
-  }
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <div className="max-w-[1440px] mx-auto">
+    <div className=" mx-auto fixed top-0 w-screen z-10">
       <Navbar rounded className="">
-
         {/* Logo */}
         <Link href="/"  >
           <button onClick={handleOpen} className="xl:hidden me-2" type="button" name="menu-toggle" aria-expanded="false">
@@ -52,41 +50,180 @@ export default function NavbarMain() {
 
         <div className="hidden xl:flex items-center space-x-4 justify-between p-4  mx-auto">
           {/* Dropdown Menu */}
-          <Dropdown label="" inline={true} onMouseEnter={openDropdown}  renderTrigger={()=> <span id="class" onMouseEnter={openDropdown}  className="flex gap-2 items-center cursor-pointer">ক্লাস ৬-১২ <IoIosArrowDown/></span>}>
-            <Dropdown.Item>ক্লাস ৬</Dropdown.Item>
-            <Dropdown.Item>ক্লাস ৭</Dropdown.Item>
-            <Dropdown.Item>ক্লাস ৮</Dropdown.Item>
-            <Dropdown.Item>ক্লাস ৯-১০</Dropdown.Item>
-            <Dropdown.Item>এইচএসসি</Dropdown.Item>
-          </Dropdown>
-          <Dropdown label="স্কিলস" inline={true}>
-            <Dropdown.Item>ক্লাস ৬</Dropdown.Item>
-            <Dropdown.Item>ক্লাস ৭</Dropdown.Item>
-            <Dropdown.Item>ক্লাস ৮</Dropdown.Item>
-            <Dropdown.Item>ক্লাস ৯-১০</Dropdown.Item>
-            <Dropdown.Item>এইচএসসি</Dropdown.Item>
-          </Dropdown>
-          <Dropdown label="ইংলিশ সেন্টার" inline={true}>
-            <Dropdown.Item>ক্লাস ৬</Dropdown.Item>
-            <Dropdown.Item>ক্লাস ৭</Dropdown.Item>
-            <Dropdown.Item>ক্লাস ৮</Dropdown.Item>
-            <Dropdown.Item>ক্লাস ৯-১০</Dropdown.Item>
-            <Dropdown.Item>এইচএসসি</Dropdown.Item>
-          </Dropdown>
-          <Dropdown label="অনলাইন ব্যাচ" inline={true}>
-            <Dropdown.Item>ক্লাস ৬</Dropdown.Item>
-            <Dropdown.Item>ক্লাস ৭</Dropdown.Item>
-            <Dropdown.Item>ক্লাস ৮</Dropdown.Item>
-            <Dropdown.Item>ক্লাস ৯-১০</Dropdown.Item>
-            <Dropdown.Item>এইচএসসি</Dropdown.Item>
-          </Dropdown>
-          <Dropdown label="আরও" inline={true}>
-            <Dropdown.Item>ক্লাস ৬</Dropdown.Item>
-            <Dropdown.Item>ক্লাস ৭</Dropdown.Item>
-            <Dropdown.Item>ক্লাস ৮</Dropdown.Item>
-            <Dropdown.Item>ক্লাস ৯-১০</Dropdown.Item>
-            <Dropdown.Item>এইচএসসি</Dropdown.Item>
-          </Dropdown>
+          <div
+            className="relative"
+            onMouseEnter={() => setIsDropdownOpen(0)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            {/* Dropdown Trigger */}
+            <div className="flex items-center gap-2 cursor-pointer">
+              <span>ক্লাস ৬-১২</span>
+              <IoIosArrowDown />
+            </div>
+
+            {/* Dropdown Content */}
+            {isDropdownOpen === 0 && (
+              <div className="absolute top-[90%] left-0 mt-2 w-40 bg-white shadow-lg rounded">
+                <ul>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৬
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৭
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৮
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৯-১০
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    এইচএসসি
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+
+          <div
+            className="relative"
+            onMouseEnter={() => setIsDropdownOpen(1)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            {/* Dropdown Trigger */}
+            <div className="flex items-center gap-2 cursor-pointer">
+              <span>স্কিলস</span>
+              <IoIosArrowDown />
+            </div>
+
+            {/* Dropdown Content */}
+            {isDropdownOpen === 1 && (
+              <div className="absolute top-[90%] left-0 mt-2 w-40 bg-white shadow-lg rounded">
+                <ul>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৬
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৭
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৮
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৯-১০
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    এইচএসসি
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+          <div
+            className="relative"
+            onMouseEnter={() => setIsDropdownOpen(2)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            {/* Dropdown Trigger */}
+            <div className="flex items-center gap-2 cursor-pointer">
+              <span>ইংলিশ সেন্টার</span>
+              <IoIosArrowDown />
+            </div>
+
+            {/* Dropdown Content */}
+            {isDropdownOpen === 2 && (
+              <div className="absolute top-[90%] left-0 mt-2 w-40 bg-white shadow-lg rounded">
+                <ul>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৬
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৭
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৮
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৯-১০
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    এইচএসসি
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+
+          <div
+            className="relative"
+            onMouseEnter={() => setIsDropdownOpen(3)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            {/* Dropdown Trigger */}
+            <div className="flex items-center gap-2 cursor-pointer">
+              <span>অনলাইন ব্যাচ</span>
+              <IoIosArrowDown />
+            </div>
+
+            {/* Dropdown Content */}
+            {isDropdownOpen === 3 && (
+              <div className="absolute top-[90%] left-0 mt-2 w-40 bg-white shadow-lg rounded">
+                <ul>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৬
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৭
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৮
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৯-১০
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    এইচএসসি
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+          <div
+            className="relative"
+            onMouseEnter={() => setIsDropdownOpen(4)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            {/* Dropdown Trigger */}
+            <div className="flex items-center gap-2 cursor-pointer">
+              <span>আরও</span>
+              <IoIosArrowDown />
+            </div>
+
+            {/* Dropdown Content */}
+            {isDropdownOpen === 4 && (
+              <div className="absolute top-[90%] left-0 mt-2 w-40 bg-white shadow-lg rounded">
+                <ul>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৬
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৭
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৮
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    ক্লাস ৯-১০
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    এইচএসসি
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+
+
         </div>
 
         <div className="flex items-center space-x-4 md:space-x-6">
