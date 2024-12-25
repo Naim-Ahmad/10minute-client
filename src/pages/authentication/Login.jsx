@@ -116,13 +116,14 @@ export default function Login() {
           <div className="p-0">
             <div className="flex flex-col items-center w-full ">
               <h2 className="mb-4 w-full  text-lg font-semibold md:mb-5 md:text-[21px]"></h2>
-              {isExist === null && <div className="relative mb-6 w-full">
+              {(isExist === null || isExist === false) && <div className="relative mb-6 w-full">
                 <input
                   type="text"
                   className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-600 peer"
                   placeholder=""
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
+                  disabled={isExist === false}
                 />
                 <label htmlFor="floating_outlined" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">
                   মোবাইল নাম্বার / ইমেইল
