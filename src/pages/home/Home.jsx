@@ -4,6 +4,7 @@ export default function Home() {
   return (
     <div>
       <div className="bg-black text-white py-10 bg-[url(https://cdn.10minuteschool.com/images/Background_Noise_1732776287934.png)]">
+      {/* online courses */}
         <div className="px-2 md:container md:px-0 mx-auto">
           <div className="items-center justify-center hidden pb-10 md:flex">
             <div className="undefined opacity-0 transition-opacity duration-300 ease-in-out" style={{ fontSize: "0px", opacity: 1 }}>
@@ -89,7 +90,9 @@ export default function Home() {
                     </div>
                     <div className="scrollbar-hide relative flex flex-nowrap gap-4 overflow-x-scroll scroll-smooth snap-x snap-mandatory">
                       <a className="w-[94px] flex-shrink-0 snap-start" id="slide_#0" href="https://10minuteschool.com/product/ielts-live-batch/">
-                        <div className="undefined opacity-0 transition-opacity duration-300 ease-in-out" style={{ fontSize: 0, opacity: 1 }}><img alt="image" data-original-src="https://cdn.10ms.com/builder/sections/resources/images/IELTS-Live-Batch-Web-Carousel-5_%281%29_1724224897864.jpg" draggable="false" loading="lazy" width="94" height="133" decoding="async" data-nimg="1" className="rounded-md hover:shadow shadow-lg transition-all duration-300" style={{ color: "transparent" }} src="https://cdn.10ms.com/builder/sections/resources/images/IELTS-Live-Batch-Web-Carousel-5_%281%29_1724224897864.jpg?w=94&amp;h=133" /></div>
+                        <div className="undefined opacity-0 transition-opacity duration-300 ease-in-out" style={{ fontSize: 0, opacity: 1 }}>
+                          <img alt="image" data-original-src="https://cdn.10ms.com/builder/sections/resources/images/IELTS-Live-Batch-Web-Carousel-5_%281%29_1724224897864.jpg" draggable="false" loading="lazy" width="94" height="133" decoding="async" data-nimg="1" className="rounded-md hover:shadow shadow-lg transition-all duration-300" style={{ color: "transparent" }} src="https://cdn.10ms.com/builder/sections/resources/images/IELTS-Live-Batch-Web-Carousel-5_%281%29_1724224897864.jpg?w=94&amp;h=133" />
+                          </div>
                       </a>
                       <a className="w-[94px] flex-shrink-0 snap-start" id="slide_#1" href="https://10minuteschool.com/product/english-grammar-course/?promo=ms1690">
                         <div className="undefined opacity-0 transition-opacity duration-300 ease-in-out" style={{ fontSize: 0, opacity: 1 }}><img alt="image" data-original-src="https://cdn.10ms.com/builder/sections/resources/images/GBEG_1719211393710.jpg" draggable="false" loading="lazy" width="94" height="133" decoding="async" data-nimg="1" className="rounded-md hover:shadow shadow-lg transition-all duration-300" style={{ color: "transparent" }} src="https://cdn.10ms.com/builder/sections/resources/images/GBEG_1719211393710.jpg?w=94&amp;h=133" /></div>
@@ -136,7 +139,6 @@ export default function Home() {
               <ul className="flex flex-nowrap items-center gap-2 md:justify-center mb-6">
                 <a
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="px-4 py-2 rounded-lg bg-white/5 flex items-center gap-2 text-sm snap-center"
                   href="https://www.google.com/maps/place/10+Minute+School+English+Centre+(Uttara)/@23.8645579,90.3963086,17z/data=!4m7!3m6!1s0x3755c5b9650f1f69:0x5e5b69cc4630435f!8m2!3d23.8645583!4d90.3988842!15sCj44dGggRmxvb3IsIE1pbGxlbm5pdW0gVG93ZXIsIEhvdXNlIDIsIFJvYWQgNywgU2VjdG9yIDMsIFV0dGFyYZIBEGVkdWNhdGlvbl9jZW50ZXLgAQA!16s%2Fg%2F11vr95pdw8?entry=tts"
                 >
@@ -144,7 +146,7 @@ export default function Home() {
                     <svg
                       stroke="currentColor"
                       fill="none"
-                      strokeWidth="2"
+                      strokeWidth={2}
                       viewBox="0 0 24 24"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -152,27 +154,26 @@ export default function Home() {
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <path
                         d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
-                        strokeWidth="0"
+                        strokeWidth={0}
                         fill="currentColor"
-                      ></path>
+                      />
                     </svg>
                   </span>
                   <span className="whitespace-nowrap">উত্তরা</span>
                 </a>
                 <a
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="px-4 py-2 rounded-lg bg-white/5 flex items-center gap-2 text-sm snap-center"
-                  href="https://www.google.com/maps/place/10+Minute+School+English+Centre+(Uttara)/@23.8645579,90.3963086,17z/data=!4m7!3m6!1s0x3755c5b9650f1f69:0x5e5b69cc4630435f!8m2!3d23.8645583!4d90.3988842!15sCj44dGggRmxvb3IsIE1pbGxlbm5pdW0gVG93ZXIsIEhvdXNlIDIsIFJvYWQgNywgU2VjdG9yIDMsIFV0dGFyYZIBEGVkdWNhdGlvbl9jZW50ZXLgAQA!16s%2Fg%2F11vr95pdw8?entry=tts"
+                  href="https://maps.app.goo.gl/5S6zt16obZspNfA28?g_st=com.google.maps.preview.copy"
                 >
                   <span className="bg-white/5 p-2 rounded-full inline-block">
                     <svg
                       stroke="currentColor"
                       fill="none"
-                      strokeWidth="2"
+                      strokeWidth={2}
                       viewBox="0 0 24 24"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -180,27 +181,26 @@ export default function Home() {
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <path
                         d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
-                        strokeWidth="0"
+                        strokeWidth={0}
                         fill="currentColor"
-                      ></path>
+                      />
                     </svg>
                   </span>
-                  <span className="whitespace-nowrap">উত্তরা</span>
+                  <span className="whitespace-nowrap">পান্থপথ</span>
                 </a>
                 <a
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="px-4 py-2 rounded-lg bg-white/5 flex items-center gap-2 text-sm snap-center"
-                  href="https://www.google.com/maps/place/10+Minute+School+English+Centre+(Uttara)/@23.8645579,90.3963086,17z/data=!4m7!3m6!1s0x3755c5b9650f1f69:0x5e5b69cc4630435f!8m2!3d23.8645583!4d90.3988842!15sCj44dGggRmxvb3IsIE1pbGxlbm5pdW0gVG93ZXIsIEhvdXNlIDIsIFJvYWQgNywgU2VjdG9yIDMsIFV0dGFyYZIBEGVkdWNhdGlvbl9jZW50ZXLgAQA!16s%2Fg%2F11vr95pdw8?entry=tts"
+                  href="https://www.google.com/maps/place/10+Minute+School+English+Centre+(Mirpur)/@23.8044657,90.3693722,15z/data=!4m6!3m5!1s0x3755c1ad1ad1b665:0x6bca269305be939d!8m2!3d23.8044657!4d90.3693722!16s%2Fg%2F11lnrxpzk8?entry=tts&g_ep=EgoyMDI0MDkxMS4wKgBIAVAD"
                 >
                   <span className="bg-white/5 p-2 rounded-full inline-block">
                     <svg
                       stroke="currentColor"
                       fill="none"
-                      strokeWidth="2"
+                      strokeWidth={2}
                       viewBox="0 0 24 24"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -208,27 +208,26 @@ export default function Home() {
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <path
                         d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
-                        strokeWidth="0"
+                        strokeWidth={0}
                         fill="currentColor"
-                      ></path>
+                      />
                     </svg>
                   </span>
-                  <span className="whitespace-nowrap">উত্তরা</span>
+                  <span className="whitespace-nowrap">মিরপুর</span>
                 </a>
                 <a
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="px-4 py-2 rounded-lg bg-white/5 flex items-center gap-2 text-sm snap-center"
-                  href="https://www.google.com/maps/place/10+Minute+School+English+Centre+(Uttara)/@23.8645579,90.3963086,17z/data=!4m7!3m6!1s0x3755c5b9650f1f69:0x5e5b69cc4630435f!8m2!3d23.8645583!4d90.3988842!15sCj44dGggRmxvb3IsIE1pbGxlbm5pdW0gVG93ZXIsIEhvdXNlIDIsIFJvYWQgNywgU2VjdG9yIDMsIFV0dGFyYZIBEGVkdWNhdGlvbl9jZW50ZXLgAQA!16s%2Fg%2F11vr95pdw8?entry=tts"
+                  href="https://www.google.com/maps/place/10+Minute+School+English+Centre+Moghbazar/@23.7490976,90.4048202,17z/data=!4m6!3m5!1s0x3755b9b9609f3105:0xa35b9e083d068494!8m2!3d23.7490979!4d90.4078299!16s%2Fg%2F11wqdj3dp1?entry=tts&g_ep=EgoyMDI0MTAyOS4wIPu8ASoASAFQAw%3D%3D"
                 >
                   <span className="bg-white/5 p-2 rounded-full inline-block">
                     <svg
                       stroke="currentColor"
                       fill="none"
-                      strokeWidth="2"
+                      strokeWidth={2}
                       viewBox="0 0 24 24"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -236,27 +235,26 @@ export default function Home() {
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <path
                         d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
-                        strokeWidth="0"
+                        strokeWidth={0}
                         fill="currentColor"
-                      ></path>
+                      />
                     </svg>
                   </span>
-                  <span className="whitespace-nowrap">উত্তরা</span>
+                  <span className="whitespace-nowrap">মগবাজার</span>
                 </a>
                 <a
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="px-4 py-2 rounded-lg bg-white/5 flex items-center gap-2 text-sm snap-center"
-                  href="https://www.google.com/maps/place/10+Minute+School+English+Centre+(Uttara)/@23.8645579,90.3963086,17z/data=!4m7!3m6!1s0x3755c5b9650f1f69:0x5e5b69cc4630435f!8m2!3d23.8645583!4d90.3988842!15sCj44dGggRmxvb3IsIE1pbGxlbm5pdW0gVG93ZXIsIEhvdXNlIDIsIFJvYWQgNywgU2VjdG9yIDMsIFV0dGFyYZIBEGVkdWNhdGlvbl9jZW50ZXLgAQA!16s%2Fg%2F11vr95pdw8?entry=tts"
+                  href="#"
                 >
                   <span className="bg-white/5 p-2 rounded-full inline-block">
                     <svg
                       stroke="currentColor"
                       fill="none"
-                      strokeWidth="2"
+                      strokeWidth={2}
                       viewBox="0 0 24 24"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -264,18 +262,18 @@ export default function Home() {
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <path
                         d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
-                        strokeWidth="0"
+                        strokeWidth={0}
                         fill="currentColor"
-                      ></path>
+                      />
                     </svg>
                   </span>
-                  <span className="whitespace-nowrap">উত্তরা</span>
+                  <span className="whitespace-nowrap">চকবাজার, চট্টগ্রাম</span>
                 </a>
-                {/* Repeat similar anchor tags for other locations */}
               </ul>
+
             </div>
             <div className="flex flex-col md:flex-row justify-center gap-4 mb-6">
               <a
@@ -2105,7 +2103,6 @@ export default function Home() {
             </div>
           </div>
 
-
           <div className="section visible pt-20">
             <div
               className="mx-auto px-4 text-center"
@@ -2123,7 +2120,7 @@ export default function Home() {
               </div>
               <div className="tenms-carousel relative  light right">
                 <div className="w-full overflow-hidden">
-                  <div className="cursor-pointer absolute right-0 top-1/2 z-[3] block -translate-y-1/2 cursor-pointer mx-lg:hidden ">
+                  <div className="cursor-pointer absolute right-0 top-1/2 z-[3] block -translate-y-1/2  mx-lg:hidden ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={33}
@@ -2141,7 +2138,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <div className="cursor-pointer absolute left-0 top-1/2 z-[2] block -translate-y-1/2 cursor-pointer mx-lg:hidden pointer-events-none opacity-10">
+                  <div className="cursor-pointer absolute left-0 top-1/2 z-[2] block -translate-y-1/2  mx-lg:hidden pointer-events-none opacity-10">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={33}
@@ -2760,8 +2757,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-
 
         </div>
 
